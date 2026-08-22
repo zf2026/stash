@@ -1,31 +1,33 @@
 #   # ios上自定义屏蔽域名（减少日记报错）
 # UPDATED: 2026-08-23 07:25:00
-# DOMAIN: 12
+# DOMAIN: 11
+# DOMAIN-SUFFIX: 11
 # DOMAIN-KEYWORD: 3
-# DOMAIN-SUFFIX: 10
 # TOTAL: 25
+
+DOMAIN,apm.hexin.cn
+DOMAIN,in.zhihu.com
 DOMAIN,dns.quad9.net
-DOMAIN-SUFFIX,agconnect.link
-DOMAIN,sealine.youku.com
 DOMAIN,speedv6.m.jd.com
+DOMAIN,sealine.youku.com
+DOMAIN,cmonitor.iqiyi.com
+DOMAIN,msmp.abchina.com.cn
+DOMAIN,httpdns.meituan.com
 DOMAIN,status-ipv6.jpush.cn
 DOMAIN,appcloud2.in.zhihu.com
-DOMAIN,httpdns.meituan.com
-DOMAIN,apm.hexin.cn
 DOMAIN,cn-hangzhou.log.aliyuncs.com
-DOMAIN,cmonitor.iqiyi.com
-DOMAIN,in.zhihu.com
-DOMAIN,msmp.abchina.com.cn
-DOMAIN-SUFFIX,sdk.myapp.com
-DOMAIN-SUFFIX,umengcloud.com
+DOMAIN-SUFFIX,iq.com
 DOMAIN-SUFFIX,umeng.com
 DOMAIN-SUFFIX,ppsimg.com
-DOMAIN-SUFFIX,zhihu-cloud.com
 DOMAIN-SUFFIX,jddebug.com
-DOMAIN-SUFFIX,iq.com
-DOMAIN-SUFFIX,d.meituan.net
 DOMAIN-SUFFIX,ucdl.com.cn
 DOMAIN-SUFFIX,qualcomm.cn
+DOMAIN-SUFFIX,d.meituan.net
+DOMAIN-SUFFIX,sdk.myapp.com
+DOMAIN-SUFFIX,umengcloud.com
+DOMAIN-SUFFIX,agconnect.link
+DOMAIN-SUFFIX,zhihu-cloud.com
+DOMAIN-KEYWORD,ajreport
 DOMAIN-KEYWORD,ipv6_cu.itdog.cn
 DOMAIN-KEYWORD,ipv4_cu.itdog.cn
-DOMAIN-KEYWORD,ajreport
+
