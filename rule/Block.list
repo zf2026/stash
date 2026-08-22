@@ -1,4 +1,9 @@
 #   # ios上自定义屏蔽域名（减少日记报错）
+# UPDATED: 2026-08-23 07:25:00
+# DOMAIN: 12
+# DOMAIN-KEYWORD: 3
+# DOMAIN-SUFFIX: 10
+# TOTAL: 25
 DOMAIN,dns.quad9.net
 DOMAIN-SUFFIX,agconnect.link
 DOMAIN,sealine.youku.com
