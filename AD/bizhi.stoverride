@@ -20,5 +20,6 @@ http:
 
 script-providers:
   "bizhi_1":
-    url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/bizhi.js
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/bizhi.js
+
     interval: 86400
