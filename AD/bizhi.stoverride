@@ -1,9 +1,10 @@
 name: |-
   bizhi
 desc: |-
-  特别说明：一次性解锁，[点恢复购买],切记关闭同域名脚本
+  一次性解锁，[点恢复购买],切记关闭同域名脚本
+  解锁SVIP
 icon: |-
-  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1092.png
+  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/VIP.png
 category: "去广告"
 
 http:
