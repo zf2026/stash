@@ -1,7 +1,7 @@
 name: |-
   bizhi
 desc: |-
-  一次性解锁，[点恢复购买],解锁SVIP。切记先关闭同域名脚本!
+  一次性解锁，[点恢复购买]解锁SVIP。切记先关闭同域名脚本!
 icon: |-
   https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/VIP.png
 category: "去广告"
