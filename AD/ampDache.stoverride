@@ -6,7 +6,6 @@ icon: |-
   https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/gaode.png
 category: "签到"
 http:
-
   mitm:
     - "*.amap.com"
 
