@@ -8,7 +8,6 @@ category: "签到"
 http:
   mitm:
     - "*.amap.com"
-
   script:
     - match: ^https?:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=)
       name: "ampDache_8"
@@ -16,14 +15,12 @@ http:
       require-body: true
       max-size: -1
       timeout: 60
-
 cron:
   script:
     - name: "ampDache_8"
       cron: 1 0 * * *
       timeout: 120
-
 script-providers:
   "ampDache_8":
-    url:https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/ampDache.js
+    url: https://cdn.jsdelivr.net/gh/wf021325/qx@master/task/ampDache.js
     interval: 86400
