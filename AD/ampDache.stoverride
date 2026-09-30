@@ -26,5 +26,5 @@ cron:
 
 script-providers:
   "ampDache_8":
-    url:     url: https://cdn.jsdelivr.net/gh/wf021325/qx@master/task/ampDache.js
+    url:https://cdn.jsdelivr.net/gh/wf021325/qx@master/task/ampDache.js
     interval: 86400
