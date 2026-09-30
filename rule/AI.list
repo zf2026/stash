@@ -1,5 +1,5 @@
 # NAME: Ai Rules
-# UPDATED: 2026-08-18
+# UPDATED: 2026-09-30
 DOMAIN,api.statsig.com
 DOMAIN,browser-intake-datadoghq.com
 DOMAIN,static.cloudflareinsights.com
