@@ -19,5 +19,5 @@ http:
             debug: false
 script-providers:
     hub-rewrite-plugin:
-        url: https://raw.githubusercontent.com/qsoyq/stash/main/script/enhance/hub-translate-plugin.js
+        url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/hub-translate-plugin.js
         interval: 86400
