@@ -27,5 +27,5 @@ http:
 
 script-providers:
   "BoxJS_8":
-    url: https://raw.githubusercontent.com/fkingikelee/fkikelee/main/Resource/raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/boxjs.js
     interval: 86400
