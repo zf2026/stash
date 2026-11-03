@@ -24,11 +24,11 @@ http:
 
   script:
     - match: ^https:\/\/api\.dianyinduoduo\.com\/v4\/config\.php\?
-      name: "DJ去广告_12"
+      name: "DJ去广告_18"
       type: response
       require-body: true
 
 script-providers:
-  "DJ去广告_12":
-    url: https://kelee.one/Resource/JavaScript/DjDuoDuo/DjDuoDuo_remove_ads.js
+  "DJ去广告_18":
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/DjDuoDuo_remove_ads.js
     interval: 86400
