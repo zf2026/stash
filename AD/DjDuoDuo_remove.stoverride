@@ -8,14 +8,14 @@ icon: |-
   https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DjDuoDuo.png
 openUrl: |-
   https://apps.apple.com/app/id1039764887
-category: "可莉去广告"
-
+category: |-
+  去广告
 loon_version: |-
-  3.4.0(962)
+  3.5.1(998)
 homepage: |-
   https://hub.kelee.one
 date: |-
-  2026-08-22 12:51:37
+  2026-10-02 13:57:49
 
 http:
 
@@ -23,12 +23,12 @@ http:
     - "api.dianyinduoduo.com"
 
   script:
-    - match: ^https:\/\/api\.dianyinduoduo\.com\/v4\/config\.php\?
-      name: "DJ去广告_18"
+    - match: (?i)^https:\/\/api\.dianyinduoduo\.com\/v4\/config\.php\?
+      name: "去广告_12"
       type: response
       require-body: true
 
 script-providers:
-  "DJ去广告_18":
+  "去广告_12":
     url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/DjDuoDuo_remove_ads.js
     interval: 86400
