@@ -8,13 +8,14 @@ icon: |-
   https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/CaixinMedia.png
 openUrl: |-
   https://apps.apple.com/app/id356023612
-category: "可莉去广告"
+category: |-
+  去广告
 loon_version: |-
-  3.4.0(962)
+  3.5.1(998)
 homepage: |-
   https://hub.kelee.one
 date: |-
-  2026-06-01 17:11:35
+  2026-10-02 13:57:49
 
 http:
 
@@ -25,48 +26,48 @@ http:
 
   url-rewrite:
     - >-
-      ^https:\/\/entities\.caixin\.com\/api\/(dataplus\/promotionHints|public\/push\/appIndex|public\/recommendNews) - reject-dict
+      (?i)^https:\/\/entities\.caixin\.com\/api\/(dataplus\/promotionHints|public\/push\/appIndex|public\/recommendNews) - reject-dict
     - >-
-      ^https:\/\/gateway\.caixin\.com\/api\/app-api\/cxAdInfo\/selectIndexAdInfo - reject-dict
+      (?i)^https:\/\/gateway\.caixin\.com\/api\/app-api\/cxAdInfo\/selectIndexAdInfo - reject-dict
     - >-
-      ^https:\/\/mappsv5\.caixin\.com\/channelv5\/article_ad_ios_info\.json - reject-dict
+      (?i)^https:\/\/mappsv5\.caixin\.com\/channelv5\/article_ad_ios_info\.json - reject-dict
     - >-
-      ^https:\/\/gg\.caixin\.com\/s\?z=caixin&slot=\d+ - reject-dict
+      (?i)^https:\/\/gg\.caixin\.com\/s\?(?:[^#?&]+&)*z=caixin&slot=\d+ - reject-dict
     - >-
-      ^https:\/\/msgapi\.caixin\.com\/msg_api\/annmsg\/annlist - reject-dict
+      (?i)^https:\/\/msgapi\.caixin\.com\/msg_api\/annmsg\/annlist - reject-dict
 
   script:
-    - match: ^https:\/\/entities\.caixin\.com\/api\/dataplus\/columns
+    - match: (?i)^https:\/\/entities\.caixin\.com\/api\/dataplus\/columns
       name: "移除财新数据通广告_18"
       type: response
       require-body: true
 
-    - match: ^https:\/\/gateway\.caixin\.com\/api\/app-api\/(caixinapp\/appinfo|search\/getkeyword)
+    - match: (?i)^https:\/\/gateway\.caixin\.com\/api\/app-api\/(caixinapp\/appinfo|search\/getkeyword)
       name: "移除财新数据通广告_18"
       type: response
       require-body: true
 
-    - match: ^https:\/\/gateway\.caixin\.com\/api\/app-content\/fm\/index\/list\?
+    - match: (?i)^https:\/\/gateway\.caixin\.com\/api\/app-content\/fm\/index\/list\?
       name: "移除财新数据通广告_18"
       type: response
       require-body: true
 
-    - match: ^https:\/\/gg\.caixin\.com\/s\?z=caixin&op=\d
+    - match: (?i)^https:\/\/gg\.caixin\.com\/s\?z=caixin&op=\d
       name: "移除财新数据通广告_18"
       type: response
       require-body: true
 
-    - match: ^https:\/\/mappsv5\.caixin\.com\/articlev5\/\d+\/\d+\.json$
+    - match: (?i)^https:\/\/mappsv5\.caixin\.com\/articlev5\/\d+\/\d+\.json$
       name: "移除财新数据通广告_18"
       type: response
       require-body: true
 
-    - match: ^https:\/\/mapps?v5\.caixin\.com\/(channelv5\/list|\/?index_page_v5\/)\w+
+    - match: (?i)^https:\/\/mapps?v5\.caixin\.com\/(channelv5\/list|\/?index_page_v5\/)\w+
       name: "移除财新数据通广告_18"
       type: response
       require-body: true
 
 script-providers:
   "移除财新数据通广告_18":
-    url: https://kelee.one/Resource/JavaScript/CaixinMedia/CaixinMedia_remove_ads.js
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/CaixinMedia_remove_ads.js
     interval: 86400
