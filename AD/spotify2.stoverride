@@ -5,7 +5,7 @@ desc: |-
 category: |-
   去广告
 icon: |-
-  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1032.png
+  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
 
 rules:
   - AND,((DOMAIN-SUFFIX,spotify.com),(PROTOCOL,UDP)),REJECT
