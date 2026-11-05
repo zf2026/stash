@@ -68,20 +68,20 @@ http:
 
 script-providers:
   "spotify-gabo_14":
-    url: https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Scripts/Spotify/spot-gabo.js
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/Spotify/spot-gabo.js
     interval: 86400
   "spotify-reject-pendragon_16":
-    url: https://raw.githubusercontent.com/SIJULY/egern-radar/main/spotify/spot-reject-dict.js
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/Spotify/spot-reject-dict.js
     interval: 86400
   "spotify-nosearchad_21":
-    url: https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Scripts/Spotify/spot-NoSearchAd.js
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/Spotify/spot-NoSearchAd.js
     interval: 86400
   "spotify-nohomead_22":
-    url: https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Scripts/Spotify/spot-NoHomeAd.js
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/Spotify/spot-NoHomeAd.js
     interval: 86400
   "spotify-noscrollad_23":
-    url: https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Scripts/Spotify/spot-NoScrollAd.js
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/Spotify/spot-NoScrollAd.js
     interval: 86400
   "spotify-proto_25":
-    url: https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Scripts/Spotify/spot-proto-ev3.js
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/Spotify/spot-proto-ev3.js
     interval: 86400
