@@ -1,0 +1,87 @@
+name: |-
+  Spotify 去广告
+desc: |-
+  转自 devchristian1337/loon-plugins(2026-10-08)：去广告 + 解锁高级功能 + 屏蔽 Spotify QUIC(修复随机切歌)。启用后请重登 Spotify。
+author: |-
+  去广告
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1032.png
+
+rules:
+  - AND,((DOMAIN-SUFFIX,spotify.com),(PROTOCOL,UDP)),REJECT
+  - DOMAIN,aet.spotify.com,REJECT
+
+http:
+
+  mitm:
+    - "spclient.wg.spotify.com"
+    - "*spclient.spotify.com"
+
+  header-rewrite:
+    - >-
+      ^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/user-customization-service\/v1\/customize request-del if-none-match
+
+  script:
+    - match: ^https:\/\/(.*-spclient\.spotify\.com(:443)?|spclient\.wg\.spotify\.com)\/gabo-receiver-service
+      name: "spotify-gabo_14"
+      type: request
+
+    - match: ^https:\/\/(spclient\.wg|.*-spclient)\.spotify\.com(:443)?\/pendragon
+      name: "spotify-reject-pendragon_16"
+      type: request
+
+    - match: ^https:\/\/(spclient\.wg|.*-spclient)\.spotify\.com(:443)?\/watch-feed-entrypoints\/v.\/discovery-from-seed
+      name: "spotify-reject-pendragon_16"
+      type: request
+
+    - match: ^https:\/\/.*-spclient\.spotify\.com(:443)?\/pam-view-service\/
+      name: "spotify-reject-pendragon_16"
+      type: request
+
+    - match: 37i9dQZF1EYkqdzj48dyYq
+      name: "spotify-reject-pendragon_16"
+      type: request
+
+    - match: ^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/browsita\/v.\/browse
+      name: "spotify-nosearchad_21"
+      type: response
+      require-body: true
+      binary-mode: true
+
+    - match: ^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/casita\/v.\/home\/
+      name: "spotify-nohomead_22"
+      type: response
+      require-body: true
+      binary-mode: true
+
+    - match: ^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/scrollsita\/v.\/scroll\/spotify
+      name: "spotify-noscrollad_23"
+      type: response
+      require-body: true
+      binary-mode: true
+
+    - match: ^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)(\?.*)?$
+      name: "spotify-proto_25"
+      type: response
+      require-body: true
+      binary-mode: true
+
+script-providers:
+  "spotify-gabo_14":
+    url: https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Scripts/Spotify/spot-gabo.js
+    interval: 86400
+  "spotify-reject-pendragon_16":
+    url: https://raw.githubusercontent.com/SIJULY/egern-radar/main/spotify/spot-reject-dict.js
+    interval: 86400
+  "spotify-nosearchad_21":
+    url: https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Scripts/Spotify/spot-NoSearchAd.js
+    interval: 86400
+  "spotify-nohomead_22":
+    url: https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Scripts/Spotify/spot-NoHomeAd.js
+    interval: 86400
+  "spotify-noscrollad_23":
+    url: https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Scripts/Spotify/spot-NoScrollAd.js
+    interval: 86400
+  "spotify-proto_25":
+    url: https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Scripts/Spotify/spot-proto-ev3.js
+    interval: 86400
