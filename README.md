@@ -21,11 +21,11 @@ Stash 配置、覆写、规则集与网络检测工具集合。
 
 - **🌐 网络检测**
 
-- 🧠 **DNS 泄漏**
+-  **DNS 泄漏**
   - [DNS泄漏测试1](https://dnsleaktest.com/)
 
   - [DNS泄漏测试2](https://dnscheck.tools)
 
-- 🛡️ **WebRTC 泄漏**
+-  **WebRTC 泄漏**
   - [WebRTC泄漏测试](https://browserleaks.com/webrtc)
 
