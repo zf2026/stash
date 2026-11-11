@@ -2,8 +2,9 @@ name: |-
   Spotify Premium
 desc: |-
   适配 Spotify 9.1.98 的 Nebula / Remote Config 接口及 Casita 首页去广告，兼容旧版接口
+
 icon: |-
-  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1030.png
+  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
 category: |-
   去广告
 date: |-
