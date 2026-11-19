@@ -3,7 +3,7 @@ desc: |-
   改写至尊会员属性与全部功能配额;会员节点缺失时自动补建,适配不同账号与版本的响应结构。
   自定义参数仅支持 Stash 3.7 及以上版本。
 icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/CSsaomiaoquannengwang.png'
-category: '会员解锁'
+category: '去广告'
 date: '2026-11-19'
 version: '2.1.0'
 author: 'your98k'
