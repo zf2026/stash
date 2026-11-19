@@ -415,31 +415,31 @@ function getSystemApps() {
       scripts: [
         {
           name: "抹掉：所有缓存",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.caches.js"
+          script: "https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/boxjs/boxjs.revert.caches.js"
         },
         {
           name: "抹掉：收藏应用",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.usercfgs.favapps.js"
+          script: "https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/boxjs/boxjs.revert.usercfgs.favapps.js"
         },
         {
           name: "抹掉：用户偏好",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.usercfgs.js"
+          script: "https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/boxjs/boxjs.revert.usercfgs.js"
         },
         {
           name: "抹掉：所有会话",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.usercfgs.sessions.js"
+          script: "https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/boxjs/boxjs.revert.usercfgs.sessions.js"
         },
         {
           name: "抹掉：所有备份",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.baks.js"
+          script: "https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/boxjs/boxjs.revert.baks.js"
         },
         {
           name: "抹掉：BoxJs (注意备份)",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.boxjs.js"
+          script: "https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/boxjs/boxjs.revert.boxjs.js"
         }
       ],
       author: '@chavyleung',
-      repo: 'https://github.com/chavyleung/scripts/blob/master/box/switcher/box.switcher.js',
+      repo: 'https://github.com/zf2026/stash/blob/main/script/boxjs/box.switcher.js',
       icons: [
         'https://raw.githubusercontent.com/chavyleung/scripts/master/box/icons/BoxSetting.mini.png',
         'https://raw.githubusercontent.com/chavyleung/scripts/master/box/icons/BoxSetting.png'
@@ -452,12 +452,12 @@ function getSystemApps() {
       keys: [],
       settings: [{ id: 'CFG_BoxSwitcher_isSilent', name: '静默运行', val: false, type: 'boolean', desc: '切换会话时不发出系统通知!' }],
       author: '@chavyleung',
-      repo: 'https://github.com/chavyleung/scripts/blob/master/box/switcher/box.switcher.js',
+      repo: 'https://github.com//zf2026/stash/refs/heads/main/script/boxjs/box.switcher.js',
       icons: [
         'https://raw.githubusercontent.com/chavyleung/scripts/master/box/icons/BoxSwitcher.mini.png',
         'https://raw.githubusercontent.com/chavyleung/scripts/master/box/icons/BoxSwitcher.png'
       ],
-      script: 'https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js'
+      script: 'https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/boxjs/box.switcher.js'
     },
     {
       id: "BoxGist",
@@ -493,15 +493,15 @@ function getSystemApps() {
       scripts: [
         {
           name: "备份 Gist",
-          script: "https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js"
+          script: "https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/boxjs/gist/backup.js"
         },
         {
           name: "从 Gist 恢复",
-          script: "https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js"
+          script: "https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/boxjs/restore.js"
         },
         {
           name: "更新历史版本",
-          script: "https://raw.githubusercontent.com/dompling/Script/master/gist/commit.js"
+          script: "https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/boxjs/commit.js"
         }
       ],
       settings: [
