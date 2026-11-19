@@ -4,7 +4,7 @@ desc: |-
   是所有去广告类覆写的依赖项。161 条规则 + 6 条 url-rewrite,无需 MitM 也可生效;
   仅 4 条 JSON 接口改写依赖 MitM。
 icon: 'https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/HTTPDNS.png'
-category: '去广告'
+category: 'Tools'
 date: '2026-11-18'
 
 rules:
