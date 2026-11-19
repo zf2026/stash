@@ -469,8 +469,8 @@ function getSystemApps() {
         "@gist.revision_options",
         "@gist.backup_type"
       ],
-      author: "@dompling",
-      repo: "https://github.com/dompling/Script/tree/master/gist",
+      author: "@zf2026",
+      repo: "https://github.com/zf2026/stash/tree/main/script/boxjs",
       icons: [
         "https://raw.githubusercontent.com/Former-Years/icon/master/github-bf.png",
         "https://raw.githubusercontent.com/Former-Years/icon/master/github-bf.png"
