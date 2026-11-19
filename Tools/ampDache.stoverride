@@ -1,11 +1,8 @@
-name: |-
-  ampDache
-desc: |-
-  高德打车签到
-icon: |-
-  https://raw.githubusercontent.com/ishowshu/loon/refs/heads/main/icon/gaode.png
-category: 'Tools'
-date: '2026-1-18'
+name: "ampDache"
+desc: "高德打车签到"
+icon: "https://raw.githubusercontent.com/ishowshu/loon/refs/heads/main/icon/gaode.png"
+category: "Tools"
+date: "2026-1-18"
 
 http:
 
