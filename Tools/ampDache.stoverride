@@ -25,6 +25,6 @@ cron:
       timeout: 120
 
 script-providers:
-  "ampDache_3":
+  "ampDache_8":
     url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/ampDache.js
     interval: 86400
