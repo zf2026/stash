@@ -2,7 +2,7 @@ name: '广告平台拦截器'
 desc: |-
   去广告, 依赖。广告平台拦截器，拦截腾讯/字节/快手/百度/优量汇/友盟/汇量等主流广告 SDK 的请求
   依赖型插件：需配合各应用去广告覆写使用，并保持排在靠前位置
-category: 'Tools'
+category: '去广告'
 icon: 'https://raw.githubusercontent.com/luestr/IconResource/main/Website_icon/120px/TencentAd.png'
 date: '2026-11-16'
 
