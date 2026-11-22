@@ -1,4 +1,4 @@
-name: "Script Hub(β): 重写 & 规则集转换"
+name: "Script Hub: 重写 & 规则集转换"
 desc: "https://script.hub"
 author: "@小白脸 @xream @keywos @ckyb"
 icon: "https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/assets/icon-dark.png"
@@ -36,14 +36,14 @@ http:
 
 script-providers:
   "Script Hub: 前端":
-    url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-hub.beta.js
+    url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-hub.js
     interval: 86400
   "Script Hub: 重写转换":
-    url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/Rewrite-Parser.beta.js
+    url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/Rewrite-Parser.js
     interval: 86400
   "Script Hub: 规则集转换":
-    url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/rule-parser.beta.js
+    url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/rule-parser.js
     interval: 86400
   "Script Hub: 脚本转换":
-    url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-converter.beta.js
+    url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-converter.js
     interval: 86400
