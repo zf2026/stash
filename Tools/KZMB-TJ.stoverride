@@ -52,7 +52,7 @@ script-providers:
   ChatGPT-Web-Check:
     url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/Tools/collapsed-tiles/chatgpt-web.js
   ChatGPT-App-Check:
-    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/Tools/collapsed-tiles/hatgpt-app.js
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/Tools/collapsed-tiles/chatgpt-app.js
   YouTube-Check:
     url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/Tools/collapsed-tiles/youtube.js
   Netflix-Check:
