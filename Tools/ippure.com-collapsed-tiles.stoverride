@@ -1,7 +1,7 @@
 name: 控制面板_统计
 icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
 desc: >
-  第三方服务，通过IPPure.com展示是否原生IP
+  第三方服务，通过IPPure.com展示。
 category: "Tools"
 tiles:
   - name: IPPure-IP-Info
@@ -21,39 +21,39 @@ tiles:
     url: https://ippure.com
   - name: ChatGPT-Web-Check
     title: ChatGPT Web
-    icon: https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/img/chatgpt.png
+    icon: https://raw.githubusercontent.com/zf2026/stash/main/Tools/collapsed-tiles/img/chatgpt.png
     collapsed: true
     url: https://chatgpt.com
   - name: ChatGPT-App-Check
     title: ChatGPT App
-    icon: https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/img/chatgpt.png
+    icon: https://raw.githubusercontent.com/zf2026/stash/main/Tools/collapsed-tiles/img/chatgpt.png
     collapsed: true
     url: https://chatgpt.com
   - name: YouTube-Check
     title: YouTube
-    icon: https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/img/youtube.png
+    icon: https://raw.githubusercontent.com/zf2026/stash/main/Tools/collapsed-tiles/img/youtube.png
     collapsed: true
     url: https://www.youtube.com
   - name: Netflix-Check
     title: Netflix
-    icon: https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/img/netflix.png
+    icon: https://raw.githubusercontent.com/zf2026/stash/main/Tools/collapsed-tiles/img/netflix.png
     collapsed: true
     url: https://www.netflix.com
 script-providers:
   IPPure-IP-Info:
-    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/cs/ippure-ip-info.js
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/Tools/collapsed-tiles/ippure-ip-info.js
     path: ippure/ip-info.js
   IPPure-IP-Fraud-Score:
-    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/cs/ippure-ip-fraud-score.js
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/Tools/collapsed-tiles/ippure-ip-fraud-score.js
     path: ippure/ip-fraud-score.js
   IPPure-IP-Native-Check:
-    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/cs/ippure-ip-native-check.js
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/Tools/collapsed-tiles/ippure-ip-native-check.js
     path: ippure/ip-native-check.js
   ChatGPT-Web-Check:
-    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/cs/chatgpt-web.js
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/Tools/collapsed-tiles/chatgpt-web.js
   ChatGPT-App-Check:
-    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/cs/chatgpt-app.js
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/Tools/collapsed-tiles/chatgpt-app.js
   YouTube-Check:
-    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/cs/youtube.js
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/Tools/collapsed-tiles/youtube.js
   Netflix-Check:
-    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/cs/netflix.js
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/Tools/collapsed-tiles/netflix.js
