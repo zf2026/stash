@@ -1,0 +1,85 @@
+name: |-
+  财新文章解锁
+desc: |-
+  解锁文章正文与收听功能
+icon: |-
+  https://raw.githubusercontent.com/sooyaaabo/IconLibrary/main/App/CaiXin.png
+category: "去广告"
+
+rules:
+  - DOMAIN,gg.caixin.com,REJECT
+  - DOMAIN,dolphin.caixin.com,REJECT
+
+http:
+
+  mitm:
+    - "mappsv5.caixin.com"
+    - "gateway.caixin.com"
+    - "mini.caixin.com"
+    - "cxdata.caixin.com"
+    - "entities.caixin.com"
+    - "www.caixin.com"
+    - "deepview-dynamic.caixin.com"
+
+  url-rewrite:
+    - >-
+      ^https:\/\/cxdata\.caixin\.com\/api\/dataplus\/stkData\/list - reject-dict
+    - >-
+      ^https:\/\/entities\.caixin\.com\/api\/public\/push\/appIndex\?(?:[^#?&]+&)*target=index - reject-dict
+    - >-
+      ^https:\/\/gateway\.caixin\.com\/api\/app-api\/search\/getkeyword - reject-dict
+    - >-
+      ^https:\/\/gateway\.caixin\.com\/api\/app-api\/caixinminiapp\/appinfo - reject-dict
+    - >-
+      ^https:\/\/gateway\.caixin\.com\/api\/app-api\/articlesHotRecommend\/getHotRecommendArticles - reject-dict
+    - >-
+      ^https:\/\/www\.caixin\.com\/ai\/question.+ - reject-dict
+
+  script:
+    - match: ^https://mappsv5\.caixin\.com/articlev5/\d+/\d+\.html
+      name: "wzzw_3"
+      type: response
+      require-body: true
+      max-size: 524288
+      timeout: 30
+
+    - match: ^https://mini\.caixin\.com/(m/)?\d{4}-\d{2}-\d{2}/\d+\.html
+      name: "wzzw_3"
+      type: response
+      require-body: true
+      max-size: 524288
+      timeout: 30
+
+    - match: ^https://gateway\.caixin\.com/api/app-api/auth/newValidate$
+      name: "wzqx_5"
+      type: response
+      require-body: true
+      max-size: 131072
+
+    - match: ^https://gateway\.caixin\.com/api/app-api/auth/validateAudioAuth$
+      name: "ypjs_6"
+      type: response
+      require-body: true
+      max-size: 131072
+      timeout: 25
+
+    - match: ^https://deepview-dynamic\.caixin\.com/api/topic/config/(event|topic)/
+      name: "deepview配置_7"
+      type: response
+      require-body: true
+      max-size: 131072
+      timeout: 10
+
+script-providers:
+  "wzzw_3":
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/caixin-article.js
+    interval: 86400
+  "wzqx_5":
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/caixin-vip.js
+    interval: 86400
+  "ypjs_6":
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/caixin-audio.js
+    interval: 86400
+  "deepview配置_7":
+    url: https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/caixin-deepview.js
+    interval: 86400
