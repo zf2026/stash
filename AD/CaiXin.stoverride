@@ -1,33 +1,85 @@
-name: 'CaiXin'
-desc: '财新'
-icon: 'https://raw.githubusercontent.com/sooyaaabo/IconLibrary/main/App/CaiXin.png'
-category: '去广告'
-date: '2026-11-15'
-version: '1.0.0'
+name: |-
+  财新文章解锁
+desc: |-
+  解锁文章正文与收听功能
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1047.png
+category: "去广告"
 
 rules:
-  - 'DOMAIN,dolphin.caixin.com,REJECT'
-  - 'DOMAIN,gg.caixin.com,REJECT'
+  - DOMAIN,gg.caixin.com,REJECT
+  - DOMAIN,dolphin.caixin.com,REJECT
 
 http:
+
   mitm:
-    - 'cxdata.caixin.com'
-    - 'entities.caixin.com'
-    - 'gateway.caixin.com'
-    - 'www.caixin.com'
-    - 'msgapi.caixin.com'
-    - 'mappsv5.caixin.com'
+    - "mappsv5.caixin.com"
+    - "gateway.caixin.com"
+    - "mini.caixin.com"
+    - "cxdata.caixin.com"
+    - "entities.caixin.com"
+    - "www.caixin.com"
+    - "deepview-dynamic.caixin.com"
+
   url-rewrite:
-    - '^https://cxdata\.caixin\.com/api/dataplus/stkData/list - reject-dict'
-    - '^https://entities\.caixin\.com/api/public/push/appIndex\?target=index - reject-dict'
-    - '^https://gateway\.caixin\.com/api/app-api/search/getkeyword - reject-dict'
-    - '^https://gateway\.caixin\.com/api/app-api/caixinminiapp/appinfo - reject-dict'
-    - '^https://gateway\.caixin\.com/api/app-api/articlesHotRecommend/getHotRecommendArticles - reject-dict'
-    - '^https://www\.caixin\.com/ai/question.+ - reject-dict'
-    - '^https?://(msgapi|mappsv5|gateway|entities)\.caixin\.com/(msg_api/annmsg/annlist|channelv5/article_ad_ios_info\.json) - reject-dict'
-  mock:
-    - match: '^https?://(msgapi|mappsv5|gateway|entities)\.caixin\.com/(api/app-api/cxAdInfo/selectIndexAdInfo|api/app-api/search/getkeyword|api/public/recommendNews|api/public/push/appIndex|api/app-api/caixinminiapp/appinfo)'
-      text: '{"msg":"SUCESS","code":0}'
-      status-code: 200
-      headers:
-        Content-Type: 'application/json'
+    - >-
+      ^https:\/\/cxdata\.caixin\.com\/api\/dataplus\/stkData\/list - reject-dict
+    - >-
+      ^https:\/\/entities\.caixin\.com\/api\/public\/push\/appIndex\?(?:[^#?&]+&)*target=index - reject-dict
+    - >-
+      ^https:\/\/gateway\.caixin\.com\/api\/app-api\/search\/getkeyword - reject-dict
+    - >-
+      ^https:\/\/gateway\.caixin\.com\/api\/app-api\/caixinminiapp\/appinfo - reject-dict
+    - >-
+      ^https:\/\/gateway\.caixin\.com\/api\/app-api\/articlesHotRecommend\/getHotRecommendArticles - reject-dict
+    - >-
+      ^https:\/\/www\.caixin\.com\/ai\/question.+ - reject-dict
+
+  script:
+    - match: ^https://mappsv5\.caixin\.com/articlev5/\d+/\d+\.html
+      name: "文章正文_3"
+      type: response
+      require-body: true
+      max-size: 524288
+      timeout: 30
+
+    - match: ^https://mini\.caixin\.com/(m/)?\d{4}-\d{2}-\d{2}/\d+\.html
+      name: "文章正文_3"
+      type: response
+      require-body: true
+      max-size: 524288
+      timeout: 30
+
+    - match: ^https://gateway\.caixin\.com/api/app-api/auth/newValidate$
+      name: "文章权限_5"
+      type: response
+      require-body: true
+      max-size: 131072
+
+    - match: ^https://gateway\.caixin\.com/api/app-api/auth/validateAudioAuth$
+      name: "音频解锁_6"
+      type: response
+      require-body: true
+      max-size: 131072
+      timeout: 25
+
+    - match: ^https://deepview-dynamic\.caixin\.com/api/topic/config/(event|topic)/
+      name: "deepview配置_7"
+      type: response
+      require-body: true
+      max-size: 131072
+      timeout: 10
+
+script-providers:
+  "文章正文_3":
+    url: https://caixin-surge.pages.dev/surge/caixin-article.js
+    interval: 86400
+  "文章权限_5":
+    url: https://caixin-surge.pages.dev/surge/caixin-vip.js
+    interval: 86400
+  "音频解锁_6":
+    url: https://caixin-surge.pages.dev/surge/caixin-audio.js
+    interval: 86400
+  "deepview配置_7":
+    url: https://caixin-surge.pages.dev/surge/caixin-deepview.js
+    interval: 86400
