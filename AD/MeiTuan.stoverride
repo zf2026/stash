@@ -1,0 +1,71 @@
+name: '美团'
+desc: '过滤美团开屏、热搜与信息流广告'
+icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/meituan.png
+category: '去广告'
+
+http:
+  mitm:
+    - 'apimobile.meituan.com'
+    - 'feedguess.meituan.com'
+    - 'mop.meituan.com'
+    - 'mt-personalcenter.meituan.com'
+    - 'assistify.meituan.com'
+  script:
+    - name: 'MeiTuan'
+      match: '^https?://apimobile\.meituan\.com/aggroup/indexTab'
+      type: 'response'
+      require-body: true
+      timeout: 5
+    - name: 'MeiTuan'
+      match: '^https?://feedguess\.meituan\.com/lycoris/scene/(gwc_feed1_2265|personalcenter_2154)(\?|$)'
+      type: 'response'
+      require-body: true
+      timeout: 5
+    - name: 'MeiTuan'
+      match: '^https?://mt-personalcenter\.meituan\.com/usercenter/display'
+      type: 'response'
+      require-body: true
+      timeout: 5
+    - name: 'MeiTuan'
+      match: '^https?://apimobile\.meituan\.com/group/v1/deal/searchpage/defaultword'
+      type: 'response'
+      require-body: true
+      timeout: 5
+    - name: 'MeiTuan'
+      match: '^https?://apimobile\.meituan\.com/group/v1/deal/searchpage/hotword/city/divide/hotrecommend/'
+      type: 'response'
+      require-body: true
+      timeout: 5
+    - name: 'MeiTuan'
+      match: '^https?://assistify\.meituan\.com/assistant/getAppClientHornConfig'
+      type: 'response'
+      require-body: true
+      timeout: 5
+    - name: 'MeiTuan'
+      match: '^https?://mop\.meituan\.com/mop/entry/shoppingCartEntry'
+      type: 'response'
+      require-body: true
+      timeout: 5
+    - name: 'MeiTuan'
+      match: '^https?://mop\.meituan\.com/api/entryModule/startupPicture'
+      type: 'response'
+      require-body: true
+      timeout: 5
+rules:
+  - 'DOMAIN,shark-mt.meituan.com,REJECT'
+  - 'DOMAIN,shark-default.meituan.com,REJECT'
+  - 'DOMAIN,shark-dp.meituan.com,REJECT'
+  - 'DOMAIN,shark-ps.meituan.com,REJECT'
+  - 'DOMAIN,shark-wm.sankuai.com,REJECT'
+  - 'DOMAIN,shark.dianping.com,REJECT'
+  - 'DOMAIN-WILDCARD,mquic-*.meituan.com,REJECT'
+  - 'DOMAIN,httpdnsmultiapi.meituan.com,REJECT'
+  - 'DOMAIN,httpdnsmultiapivip.meituan.com,REJECT'
+  - 'DOMAIN,httpdns.meituan.com,REJECT'
+  - 'DOMAIN,httpdnsvip.meituan.com,REJECT'
+  - 'DOMAIN,dnspod.meituan.httpdns.qcloud.com,REJECT'
+  - 'DOMAIN,dnspod.meituan.httpdns.start.qcloud.com,REJECT'
+script-providers:
+  MeiTuan:
+    url: 'https://raw.githubusercontent.com/your98k/Rule-Hub/main/Script/MeiTuan.js'
+    interval: 86400
