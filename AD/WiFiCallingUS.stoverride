@@ -1,0 +1,31 @@
+name: |-
+  US Call
+desc: |-
+  参数编辑可以细化设置。适用于部分美国SIM卡的Wi-Fi Calling功能。使用本模块后打开飞行模式后再关闭飞行模式进行联网即可正常开启Wi-Fi calling
+author: |-
+  LOWERTOP
+icon: |-
+  https://raw.githubusercontent.com/LOWERTOP/Shadowrocket-First/refs/heads/main/img/WiFi_calling.png
+arguments-desc: |-
+  ·默认代理分组：默认使用模块内置的名为“US-Call”的代理分组进行代理，可填入自定义的代理分组或节点名称\n\n·通话端口代理：模块默认代理了Wi-Fi通话常用的500和4500的UDP端口，填入#号可以禁用相关端口的代理\n\n·苹果地区检测：模块默认代理了苹果的地区检测URL地址，填入#号可以恢复为默认规则\n\n·地区检测查询：https://gspe1-ssl.ls.apple.com/pep/gcc
+homepage: |-
+  https://github.com/LOWERTOP/Shadowrocket-First
+
+rules:
+  - DOMAIN-SUFFIX,crl.t-mobile.com,US-Call
+  - DOMAIN-SUFFIX,depdg.epc.mnc260.mcc310.pub.3gppnetwork.org,US-Call
+  - DOMAIN-SUFFIX,eas3.msg.t-mobile.com,US-Call
+  - DOMAIN-SUFFIX,epdg.epc.mnc240.mcc310.pub.3gppnetwork.org,US-Call
+  - DOMAIN-SUFFIX,epdg.epc.mnc260.mcc310.pub.3gppnetwork.org,US-Call
+  - DOMAIN-SUFFIX,mascns.t-mobile.com,US-Call
+  - DOMAIN-SUFFIX,ns.sipgeo.t-mobile.com,US-Call
+  - DOMAIN-SUFFIX,optimizely.com,US-Call
+  - DOMAIN-SUFFIX,redirect.ultra.me,US-Call
+  - DOMAIN-SUFFIX,ss.epdg.epc.geo.mnc260.mcc310.pub.3gppnetwork.org,US-Call
+  - DOMAIN-SUFFIX,ss.epdg.epc.mnc260.mcc310.pub.3gppnetwork.org,US-Call
+  - DOMAIN-SUFFIX,ultramobile.com,US-Call
+  - DOMAIN-KEYWORD,t-mobile,US-Call
+  - DOMAIN-KEYWORD,ultramobile,US-Call
+  - IP-CIDR,206.29.177.36/32,US-Call,no-resolve
+  - IP-CIDR,208.54.0.0/16,US-Call,no-resolve
+  - IP-CIDR,66.94.0.0/19,US-Call,no-resolve

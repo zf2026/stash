@@ -1,0 +1,29 @@
+name: |-
+  UK Call
+desc: |-
+  参数编辑可以细化设置。适用于部分英国SIM卡的Wi-Fi Calling功能
+author: |-
+  LOWERTOP
+icon: |-
+  https://raw.githubusercontent.com/LOWERTOP/Shadowrocket-First/refs/heads/main/img/WiFi_calling.png
+arguments-desc: |-
+  ·默认代理分组：默认使用模块内置的名为“UK-Call”的代理分组进行代理，可填入自定义的代理分组或节点名称\n\n·通话端口代理：模块默认代理了Wi-Fi通话常用的500和4500的UDP端口，填入#号可以禁用相关端口的代理\n\n·苹果地区检测：模块默认代理了苹果的地区检测URL地址，填入#号可以恢复为默认规则\n\n·地区检测查询：https://gspe1-ssl.ls.apple.com/pep/gcc
+homepage: |-
+  https://github.com/LOWERTOP/Shadowrocket-First
+
+rules:
+  - DOMAIN-SUFFIX,entsrv-uk.vodafone.com,UK-Call
+  - DOMAIN-SUFFIX,vuk-gto.prod.ondemandconnectivity.com,UK-Call
+  - DOMAIN-SUFFIX,epdg.epc.mnc015.mcc234.pub.3gppnetwork.org,UK-Call
+  - DOMAIN-SUFFIX,ss.epdg.epc.mnc015.mcc234.pub.3gppnetwork.org,UK-Call
+  - DOMAIN-SUFFIX,ss.epdg.epc.geo.mnc015.mcc234.pub.3gppnetwork.org,UK-Call
+  - DOMAIN-KEYWORD,mcc234,UK-Call
+  - IP-CIDR,88.82.0.0/19,UK-Call,no-resolve
+  - IP-CIDR,148.252.160.0/19,UK-Call,no-resolve
+  - IP-CIDR,46.68.0.0/17,UK-Call,no-resolve
+  - DOMAIN-SUFFIX,giffgaff.com,UK-Call
+  - IP-CIDR,87.194.0.0/16,UK-Call,no-resolve
+  - DOMAIN,vfgb.idemia.io,UK-Call
+  - IP-CIDR,148.252.160.0/19,UK-Call,no-resolve
+  - DOMAIN-SUFFIX,ee.co.uk,UK-Call
+  - IP-CIDR,31.94.0.0/16,UK-Call,no-resolve
