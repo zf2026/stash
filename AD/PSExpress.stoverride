@@ -1,9 +1,11 @@
 name: |-
   PSExpress
 desc: |-
-  PSExpress
+  PSExpress 23.49.1
 icon: |-
   https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1008.png
+category: "去广告"
+date: "2023-12-15"
 
 http:
 
