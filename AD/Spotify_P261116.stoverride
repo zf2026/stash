@@ -1,7 +1,7 @@
 name: |-
   Spotify_P261116
 desc: |-
-  1161Y会员配置、首页与播放页去广告，集成歌词补全和双语翻译
+  会员配置、首页与播放页去广告，集成歌词补全和双语翻译
 icon: |-
   https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
 category: |-
@@ -9,7 +9,7 @@ category: |-
 date: |-
   2026-11-16
 version: |-
-  2026.11.16.1
+  2026.11.16.1转换来源https://raw.githubusercontent.com/Reukix/ukix/main/Script/Spotify.sgmodule
 arguments-desc: |-
   Lyrics：启用歌词补全。Translate：启用歌词翻译。TargetLanguage：翻译目标语言，默认 zh-CN。已有官方歌词优先保留；外部歌词按歌名、歌手和时长匹配。更新后请停用其他 Spotify 歌词模块，避免重复处理同一接口。
 

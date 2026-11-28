@@ -4,6 +4,8 @@ desc: |-
   会员配置、首页与播放页去广告，集成歌词补全和双语翻译。支持编辑参数，可以调整歌词部分选项，增加百度翻译开放平台服务以增强翻译成功率。脚本来源：Reukix
 author: |-
   Reukix
+category: |-
+  去广告
 icon: |-
   https://raw.githubusercontent.com/LOWERTOP/ShadowRule/refs/heads/master/icon/color/spotify.png
 arguments-desc: |-
