@@ -1,9 +1,10 @@
-name: 'Spotify_P26'
+name: 'SSpotify_P26'
 desc: 'Spotify 去广告与解锁，拦截广告接口并补丁 Premium 配置，可隐藏三处入口。'
 openUrl: 'https://apps.apple.com/app/id324684580'
 icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/spotify.png
 category: '去广告'
 date: '2026-11-16'
+version: '2.0.0'
 arguments-version: 1
 arguments:
   HideDiscoveryFeed:
@@ -103,3 +104,4 @@ script-providers:
   spotify-optional:
     url: 'https://raw.githubusercontent.com/zf2026/stash/refs/heads/main/script/Spotify/spotify-optional.js'
     interval: 86400
+
